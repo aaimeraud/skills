@@ -1,90 +1,53 @@
-# [PROJECT NAME]
+# Skills
 
-<!--
-  Replace every [PLACEHOLDER]. Delete comments before publishing if desired.
-  Keep this README focused on what users need to understand and use the project.
--->
+A collection of agent skills, organised by topic and use case. Each topic is an installable plugin, so you only install what you need.
 
-<!-- Project logo or banner:
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaimeraud/REPOSITORY/main/docs/assets/banner.svg"
-       alt="[PROJECT NAME] banner" width="800">
-</p>
--->
+## Topics
 
-<p align="center">
-  <strong>[SHORT PROJECT DESCRIPTION]</strong>
-</p>
+| Topic | Plugin | What it covers |
+| --- | --- | --- |
+| [education](./skills/education/) | `education-skills` | Studying: reviewing homework and exercises without giving away the answers. |
 
-<!-- Customizable badges: keep only the badges that apply to the project. -->
-<p align="center">
-  <a href="https://github.com/aaimeraud/REPOSITORY/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/aaimeraud/REPOSITORY/ci.yml?branch=main&label=CI" alt="CI status">
-  </a>
-  <a href="https://github.com/aaimeraud/REPOSITORY/releases">
-    <img src="https://img.shields.io/github/v/release/aaimeraud/REPOSITORY?display_name=tag" alt="Latest release">
-  </a>
-  <a href="https://github.com/aaimeraud/REPOSITORY/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/aaimeraud/REPOSITORY" alt="License">
-  </a>
-  <!-- Add coverage, package, documentation, or community badges here. -->
-</p>
-
-## Overview
-
-[Explain the problem this project solves, who it is for, and why it exists.]
-
-## Features
-
-- [Feature or capability]
-- [Feature or capability]
-- [Feature or capability]
-
-## Requirements
-
-- [Runtime or platform requirement]
-- [Dependency or service requirement]
+New topics are added as folders under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
 
 ## Installation
 
-```shell
-# Replace with the canonical installation command.
-[INSTALL COMMAND]
-```
+### Claude Code (recommended)
 
-## Usage
+Add this repository as a marketplace, then install the plugin for the topic you want:
 
 ```shell
-# Replace with a minimal, working example.
-[USAGE COMMAND]
+/plugin marketplace add aaimeraud/skills
+/plugin install education-skills@aaimeraud-skills
 ```
 
-<!-- Optional screenshot or demo:
-<p align="center">
-  <img src="docs/assets/screenshot.png" alt="[PROJECT NAME] screenshot" width="800">
-</p>
--->
+### Manual
 
-## Documentation
+Copy the skill folder you need (for example `skills/education/homework-reviewer/`) into your agent's skills directory, such as `~/.claude/skills/`.
 
-Read the [documentation](./docs/) or visit [DOCUMENTATION URL].
+## Repository layout
+
+```text
+.claude-plugin/
+  marketplace.json          # Lists one installable plugin per topic
+skills/
+  <topic>/                  # One folder per topic or use case
+    .claude-plugin/
+      plugin.json           # Plugin manifest: lists the topic's skills
+    README.md               # Index of the topic's skills
+    <skill-name>/
+      SKILL.md              # The skill itself
+```
+
+## Skills
+
+- **education**
+  - [homework-reviewer](./skills/education/homework-reviewer/SKILL.md): Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links.
 
 ## Contributing
 
-Contributions are welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for
-development setup, commit conventions, and pull request expectations.
-
-## Support
-
-Use [GitHub Issues](https://github.com/aaimeraud/REPOSITORY/issues) for reproducible
-bugs and feature requests. For questions, use the project discussions or
-support channel documented here.
-
-## Security
-
-Please do not report security vulnerabilities in public issues. Follow the
-instructions in [`SECURITY.md`](./SECURITY.md), when available.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## License
 
-Distributed under the [LICENSE](./LICENSE) ([LICENSE NAME]) license.
+No license has been chosen yet. Until one is added, all rights are reserved by the author.

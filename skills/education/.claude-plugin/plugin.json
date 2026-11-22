@@ -1,0 +1,20 @@
+{
+  "name": "education-skills",
+  "version": "0.1.0",
+  "description": "Agent skills for studying: reviewing homework and exercises without giving away the answers.",
+  "author": {
+    "name": "aaimeraud"
+  },
+  "repository": "https://github.com/aaimeraud/skills",
+  "license": "MIT",
+  "keywords": [
+    "education",
+    "homework",
+    "exercises",
+    "learning",
+    "skills"
+  ],
+  "skills": [
+    "./homework-reviewer"
+  ]
+}
