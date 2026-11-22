@@ -1,8 +1,10 @@
 <!--
   Before opening a pull request:
-  - Use a clear Conventional Commit title: type(scope): imperative summary
-  - Keep the change focused and link the relevant issue.
-  - Run the documented checks and remove secrets from logs and screenshots.
+  - Use a Conventional Commit title: type(scope): imperative summary, 72 characters max
+    (scope = the topic, for example education).
+  - Keep the change focused on one skill or one topic.
+  - Test the skill with a real agent, not only by reading it.
+  - Remove secrets, personal data and private exercise content from the diff and logs.
 -->
 
 ## Summary
@@ -19,29 +21,36 @@ Closes #
 
 - 
 
+## Affected skill or topic
+
+<!-- For example: skills/education/homework-reviewer, or "new topic: skills/<topic>". -->
+
 ## Validation
 
-- [ ] Tests added or updated where appropriate
-- [ ] Relevant tests, linting, and formatting checks pass
-- [ ] Documentation updated where needed
-- [ ] I have manually tested the affected behavior
+- [ ] `SKILL.md` has `name` (matching the folder) and `description` in its frontmatter
+- [ ] The skill is listed in its topic's `plugin.json` and `README.md`
+- [ ] For a new topic: it is added to `.claude-plugin/marketplace.json` and the root `README.md`
+- [ ] Both JSON files still parse
+- [ ] I ran the skill with a real agent and noted the result below
+
+<!-- Describe the test run (agent, prompt, outcome). Write "N/A" with a reason if not applicable. -->
 
 ## Screenshots or recordings
 
 <!--
-  For user-facing changes, add before/after screenshots or recordings.
+  Only for changes that alter what the user sees in the agent's output.
   Delete this section when it does not apply.
 -->
 
 ## Breaking changes
 
-<!-- Describe migration steps, compatibility concerns, or write "None". -->
+<!-- Describe migration steps, changed commands, or compatibility concerns. Write "None" otherwise. -->
 
 None
 
 ## Review checklist
 
-- [ ] The change follows the repository's conventions.
+- [ ] The change follows [CONTRIBUTING.md](../CONTRIBUTING.md).
 - [ ] The change is limited to the stated scope.
-- [ ] Error handling and edge cases are covered.
-- [ ] No credentials, personal data, or generated artifacts are included.
+- [ ] For education skills: the skill still guides instead of giving answers.
+- [ ] No credentials, personal data or private material are included.

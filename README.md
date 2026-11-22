@@ -50,4 +50,4 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## License
 
-No license has been chosen yet. Until one is added, all rights are reserved by the author.
+Distributed under the [MIT License](./LICENSE).

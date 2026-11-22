@@ -1,0 +1,54 @@
+name: Idea or feedback
+description: Propose a new skill, a new topic, or a change to an existing skill
+title: "[Idea]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping grow this collection.
+
+        Describe the problem and who it affects. Avoid prescribing one exact
+        implementation: the skill's wording is for the maintainer to design.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - New skill in an existing topic
+        - New topic
+        - Change to an existing skill
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: topic
+    attributes:
+      label: Topic or skill
+      description: Which topic (for example education) or skill does this concern?
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What would this solve, and for whom?
+      placeholder: "As a ..., I need ..., because ..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe the behaviour or result you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be willing to open a pull request for this.

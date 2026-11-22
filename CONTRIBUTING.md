@@ -63,4 +63,8 @@ Keep titles short, specific and in the imperative mood, for example `feat(educat
 
 ## Reporting bugs and requesting features
 
-Use the issue forms in [`.github/ISSUE_TEMPLATE/`](./.github/ISSUE_TEMPLATE/).
+Use the issue forms in [`.github/ISSUE_TEMPLATE/`](./.github/ISSUE_TEMPLATE/): a bug report for a skill that misbehaves, or an idea for a new skill, topic or change.
+
+## License
+
+By contributing, you agree that your changes are released under the [MIT License](./LICENSE).

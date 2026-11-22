@@ -1,0 +1,70 @@
+name: Bug report
+description: Report a skill that misbehaves, fails to load, or breaks its own rules
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        Search existing issues first. Remove secrets, personal data and private
+        exercise content from logs, screenshots and examples before submitting.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      description: Which skill is affected? Use its folder path.
+      placeholder: "skills/education/homework-reviewer"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the problem in a few clear sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps that reliably reproduces the problem.
+      placeholder: |
+        1. Install the plugin ...
+        2. Run /review ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include the full output when relevant.
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and version
+      description: Which agent and version ran the skill?
+      placeholder: "Claude Code 2.x, Codex, Gemini CLI, ..."
+  - type: input
+    id: commit
+    attributes:
+      label: Repository version
+      description: Release, tag or commit of this repository.
+      placeholder: "abc1234"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and additional context
+      description: Add relevant logs or screenshots. Redact secrets and personal data first.
+      render: shell
