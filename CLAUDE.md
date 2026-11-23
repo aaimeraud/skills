@@ -10,13 +10,12 @@ skills/<topic>/                   # Topic, for example education
   README.md                       # Index of the topic's plugins
   <use-case>/                     # Plugin, for example homework
     .claude-plugin/plugin.json    # Lists the plugin's skills
-    shared/                       # Rules and reference files used by several skills
     <skill>/SKILL.md              # One skill, invoked as /<use-case>:<skill>
 ```
 
 - A skill's folder name is its command name, so `name` in its frontmatter must match the folder.
-- Put text that several skills need in `shared/`, and link to it with a relative path (`../shared/rules.md`). Do not copy it into each skill.
-- Keep each `SKILL.md` short. Long reference material goes in `shared/` and is read only by the skills that need it.
+- Each skill must be self-contained. The skills.sh installer copies only the skill's own folder, so a `SKILL.md` must not link to files outside it. Repeat the short rules it needs in its own file.
+- Keep each `SKILL.md` short. Put long reference material in the one skill that needs it.
 
 ## Adding a skill
 
@@ -38,13 +37,13 @@ Versions are per plugin in `plugin.json`. Bump a plugin's version and move its `
 
 ## Education skills (`homework`)
 
-- The skills guide the student and never give the answer, the final code, or the correct result. See `skills/education/homework/shared/rules.md`.
+- The skills guide the student and never give the answer, the final code, or the correct result. Each skill repeats the ground rules it needs.
 - The `.homework/` folder is the student's private working folder. Setup adds it to `.gitignore`. Never commit student material, briefs or answers to this repository.
 - Commands are invoked as `/homework:<skill>`, so a skill called `homework` would be a different command.
 
 ## Documentation links
 
-Only link official documentation or well-known free resources, and check each link before adding it. The shared documentation list is `skills/education/homework/shared/catalogue.md`.
+Only link official documentation or well-known free resources, and check each link before adding it. Each skill keeps its own short list of links. The full catalogue is in `skills/education/homework/topic-resources/SKILL.md`.
 
 ## Git
 

@@ -25,7 +25,7 @@ Add this repository as a marketplace, then install the plugin for the topic you 
 
 ### Other agents (skills.sh)
 
-Requires Node.js 22.20 or later. Install the whole collection at once, because a plugin's skills share files:
+Requires Node.js 22.20 or later. Install every skill in the collection at once:
 
 ```shell
 npx skills add aaimeraud/skills --all
@@ -33,7 +33,7 @@ npx skills add aaimeraud/skills --all
 
 ### Manual
 
-Copy the skill folders you need (for example `skills/education/homework/`, which contains `shared/` and one folder per command) into your agent's skills directory, such as `~/.claude/skills/`.
+Copy the skill folders you need (for example `skills/education/homework/study-setup/`) into your agent's skills directory, such as `~/.claude/skills/`.
 
 ## Repository layout
 
@@ -46,7 +46,6 @@ skills/
     <use-case>/             # One plugin per use case
       .claude-plugin/
         plugin.json         # Plugin manifest: lists the plugin's skills
-      shared/               # Rules and reference files shared by the skills
       <skill-name>/
         SKILL.md            # One skill, invoked as /<use-case>:<skill-name>
 ```

@@ -6,7 +6,7 @@ Thanks for helping grow this collection. The repository is meant to scale, so th
 
 1. Pick the plugin folder `skills/<topic>/<use-case>/` that fits. If none fits, create a new plugin for the use case (see below).
 2. Create a folder named after the skill, in lowercase kebab-case, directly under the plugin: `skills/<topic>/<use-case>/<skill-name>/`. Its command is `/<use-case>:<skill-name>`.
-   - Put rules or reference files shared by several skills in `skills/<topic>/<use-case>/shared/`, and link to them from each `SKILL.md` with a relative path such as `../shared/rules.md`.
+   - Make the skill self-contained. Installers copy only the skill's own folder, so repeat any short rules it needs inside its `SKILL.md`, and do not link to files outside it.
 3. Add a `SKILL.md` file with frontmatter:
 
    ```markdown

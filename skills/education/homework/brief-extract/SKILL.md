@@ -5,7 +5,15 @@ description: "Converts a student's PDF, image or docx brief or course resource i
 
 # Extract
 
-Read `../shared/rules.md` first and follow it.
+## Before you start
+
+Read `.homework/config.md`. If it does not exist, tell the student to run `/homework:study-setup` first, and stop. Reply in the language set in the config.
+
+## Ground rules
+
+- Never guess content that is unreadable. Ask the student instead.
+
+## Procedure
 
 - Save the result to `.homework/resources/<name>.md`. Keep the original file where the student put it.
 - Convert PDFs and images to markdown. Keep page markers such as `<!-- page 3 -->` so references stay traceable.
