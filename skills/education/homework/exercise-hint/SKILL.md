@@ -1,5 +1,5 @@
 ---
-name: "hint"
+name: "exercise-hint"
 description: "Gives a student a four-step hint for one exercise, with one official documentation link and one guiding question, never the solving code. Use when the student is stuck and asks for a hint."
 ---
 

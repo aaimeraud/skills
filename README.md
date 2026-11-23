@@ -1,6 +1,8 @@
 # Skills
 
-A collection of agent skills, organised by topic and use case. Each topic is an installable plugin, so you only install what you need.
+ A collection of agent skills, organised by topic and use case. Each topic is an installable plugin, so you only install what you need.  
+  
+[![skills.sh](https://skills.sh/b/aaimeraud/skills)](https://skills.sh/aaimeraud/skills)
 
 ## Topics
 
@@ -43,7 +45,7 @@ skills/
 
 ## Skills
 
-- **education / homework**: `setup`, `review`, `review-all`, `check`, `hint`, `explain`, `resources`, `extract`. Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links. Invoked as `/homework:<skill>`.
+- **education / homework**: `study-setup`, `exercise-review`, `exercise-review-all`, `answer-check`, `exercise-hint`, `topic-explain`, `topic-resources`, `brief-extract`. Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links. Invoked as `/homework:<skill>`.
 
 ## Contributing
 

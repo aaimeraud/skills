@@ -15,13 +15,13 @@
     "skills"
   ],
   "skills": [
-    "./setup",
-    "./review",
-    "./review-all",
-    "./check",
-    "./hint",
-    "./explain",
-    "./resources",
-    "./extract"
+    "./study-setup",
+    "./exercise-review",
+    "./exercise-review-all",
+    "./answer-check",
+    "./exercise-hint",
+    "./topic-explain",
+    "./topic-resources",
+    "./brief-extract"
   ]
 }

@@ -1,5 +1,5 @@
 ---
-name: "resources"
+name: "topic-resources"
 description: "Lists free, official or reputable documentation for a topic the student is studying. Use when the student asks where to learn or read about a subject."
 ---
 

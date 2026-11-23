@@ -1,5 +1,5 @@
 ---
-name: "explain"
+name: "topic-explain"
 description: "Explains a concept step by step for a student, defining each technical term the first time it appears and ending with a short check question. Use only when the student explicitly asks for an explanation of a topic."
 ---
 

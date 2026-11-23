@@ -1,5 +1,5 @@
 ---
-name: "review"
+name: "exercise-review"
 description: "Reviews one homework exercise for a student: status (DONE or NOT DONE), a score out of 5, and up to three guiding problems with documentation links, never the answer. Use when the student asks to review, grade or check an exercise against its brief."
 ---
 

@@ -1,6 +1,6 @@
 # Setup
 
-Run this procedure when there is no config at `.homework/config.md`, or when the student runs `/homework:setup`. It is the only time the skills ask about the work setup, so ask everything in one message.
+Run this procedure when there is no config at `.homework/config.md`, or when the student runs `/homework:study-setup`. It is the only time the skills ask about the work setup, so ask everything in one message.
 
 ## Step 1: protect the folder from git
 
@@ -28,4 +28,4 @@ Ask only these questions:
 
 ## Step 4: save the config
 
-Save the answers to `.homework/config.md`: language, subject and level, brief path, criteria, and the list of resources. Do not ask again unless the student runs `/homework:setup` again.
+Save the answers to `.homework/config.md`: language, subject and level, brief path, criteria, and the list of resources. Do not ask again unless the student runs `/homework:study-setup` again.

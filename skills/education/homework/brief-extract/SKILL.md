@@ -1,5 +1,5 @@
 ---
-name: "extract"
+name: "brief-extract"
 description: "Converts a student's PDF, image or docx brief or course resource into markdown, keeping page markers and checking that nothing is lost. Use when the student gives a file that the other homework commands must read."
 ---
 
