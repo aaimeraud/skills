@@ -16,7 +16,7 @@ body:
     attributes:
       label: Skill
       description: Which skill is affected? Use its folder path.
-      placeholder: "skills/education/homework/review"
+      placeholder: "skills/education/homework/exercise-review"
     validations:
       required: true
   - type: textarea
@@ -33,7 +33,7 @@ body:
       description: The smallest set of steps that reliably reproduces the problem.
       placeholder: |
         1. Install the plugin ...
-        2. Run /review ...
+        2. Run /homework:exercise-review ...
         3. Observe ...
     validations:
       required: true

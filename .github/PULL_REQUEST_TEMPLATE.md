@@ -23,14 +23,15 @@ Closes #
 
 ## Affected skill or topic
 
-<!-- For example: skills/education/homework/review, or "new topic: skills/<topic>". -->
+<!-- For example: skills/education/homework/exercise-review, or "new plugin: skills/<topic>/<use-case>". -->
 
 ## Validation
 
 - [ ] `SKILL.md` has `name` (matching the folder) and `description` in its frontmatter
-- [ ] The skill is listed in its topic's `plugin.json` and `README.md`
-- [ ] For a new topic: it is added to `.claude-plugin/marketplace.json` and the root `README.md`
-- [ ] Both JSON files still parse
+- [ ] The skill is listed in its plugin's `.claude-plugin/plugin.json`, in the topic's `README.md`, and in the root `README.md`
+- [ ] For a new plugin: it is added to `.claude-plugin/marketplace.json`, to `release-please-config.json`, and to `.release-please-manifest.json` (version `0.0.0`)
+- [ ] `claude plugin validate . --strict` passes
+- [ ] The PR title is a Conventional Commit, since the PR is squash-merged
 - [ ] I ran the skill with a real agent and noted the result below
 
 <!-- Describe the test run (agent, prompt, outcome). Write "N/A" with a reason if not applicable. -->
