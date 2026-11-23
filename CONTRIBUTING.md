@@ -22,10 +22,11 @@ Thanks for helping grow this collection. The repository is meant to scale, so th
 
 ## Adding a use case (plugin)
 
-1. Create `skills/<topic>/<use-case>/` with a `.claude-plugin/plugin.json`.
+1. Create `skills/<topic>/<use-case>/` with a `.claude-plugin/plugin.json`, with `"version": "0.0.0"`.
 2. Add the plugin to the topic's `README.md`.
 3. Add one entry to [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) with `name`, `source` (`./skills/<topic>/<use-case>`), `description`, `category` and `keywords`.
-4. Add the plugin to the table at the top of the root `README.md`.
+4. Add the plugin as a package in [`release-please-config.json`](./release-please-config.json) and to [`.release-please-manifest.json`](./.release-please-manifest.json) with the version `0.0.0`.
+5. Add the plugin to the table at the top of the root `README.md`.
 
 One plugin equals one use case. Its skills share a command prefix, so `/<use-case>:<skill-name>`.
 

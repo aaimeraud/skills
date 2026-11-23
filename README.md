@@ -40,6 +40,9 @@ Copy the skill folders you need (for example `skills/education/homework/study-se
 ```text
 .claude-plugin/
   marketplace.json          # Lists one installable plugin per use case
+.github/workflows/
+  release-please.yml        # Opens release PRs and publishes releases
+release-please-config.json  # Release packages, one per plugin
 skills/
   <topic>/                  # One folder per topic
     README.md               # Index of the topic's plugins
@@ -66,6 +69,10 @@ Reviews exercises with a score out of 5, checks answers without revealing them, 
 | `/homework:topic-explain <topic>` | A step-by-step explanation, only when you ask for one. |
 | `/homework:topic-resources <topic>` | Free documentation for a topic. |
 | `/homework:brief-extract <file>` | Converts a PDF, image or docx brief into markdown. |
+
+## Releases
+
+Each plugin is versioned and released on its own. After a change is merged into `main`, release-please opens a release PR with the changelog and the new version. Merging that PR creates the tag and the GitHub Release. The changelog for each plugin is in its folder, for example [`skills/education/homework/CHANGELOG.md`](./skills/education/homework/CHANGELOG.md), once the first release is out.
 
 ## Contributing
 
