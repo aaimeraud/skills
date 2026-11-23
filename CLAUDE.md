@@ -57,8 +57,8 @@ Only link official documentation or well-known free resources, and check each li
 
 ## Git
 
-- Use GitButler (`but`) for commits and branches, as set in the user's global instructions. Do not commit to `main`. Use `type/short-description` branch names.
+- Use git, or the version-control tool you prefer, for commits and branches. Do not commit to `main`. Use `type/short-description` branch names.
 - Commit titles use Conventional Commits with the topic as scope where it applies, for example `feat(education): ...`.
-- Open pull requests as drafts with the agent GitHub account, following `.github/PULL_REQUEST_TEMPLATE.md`, unless the user asks for ready for review. Never merge a pull request.
+- Open pull requests as drafts, following `.github/PULL_REQUEST_TEMPLATE.md`, unless the user asks for ready for review. Never merge a pull request.
 - Prose, skill text, commit messages and pull requests are in English.
 - Do not commit secrets, `.env` files, or the `.homework/` folder.
