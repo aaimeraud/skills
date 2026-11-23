@@ -17,7 +17,7 @@ description: "Turns a planning discussion into a Linear project with milestones,
 ## Procedure
 
 1. **Ask the language** of the Linear content (for example English or French), even when the conversation is in one language. Write everything in that language.
-2. **Choose the mode.** Use the learning variant only when the request contains "apprentissage" or "devoir maison". Otherwise use the standard variant.
+2. **Choose the mode.** Use the learning variant only when the request contains "apprentissage" or "devoir maison". Otherwise use the standard variant. Ask whether AI agents will work on the project, unless the user already said so; the answer decides whether issues get Agent notes.
 3. **Collect the plan** from the discussion: goal, scope, decisions, phases, tasks and their dependencies. Ask one precise question when something blocks the outline. Check the team with the Linear tools and look for an existing project or issue with the same subject to avoid duplicates.
 4. **Present the outline and wait for approval.** Show the project summary, the milestones, and the issue titles under each milestone with their dependencies. Create nothing yet.
 5. **Create in Linear**, in this order: project, milestones, documents, issues (with milestone, labels, estimate and "blocked by" relations). Check each tool's parameters before calling it.
@@ -41,7 +41,7 @@ description: "Turns a planning discussion into a Linear project with milestones,
 - Title: an imperative verb phrase, no number prefix ("Run `gh` from Go and add `repgo doctor`").
 - Use a sub-issue only for a part that is checkable on its own and takes more than one session. Smaller items become checkboxes in the acceptance criteria.
 - Labels: a real type (Feature, Improvement, Bug), not a generic "Task". Set an estimate. Leave priority empty unless the user gave one.
-- Implementation detail meant for an agent goes in a collapsible block at the end:
+- Agent notes are optional. Write them only when the user confirmed that AI agents will work on the project and an issue has detail specific to an agent. Never write them in the learning variant, or when the user wants to code by hand. In that case leave no empty block and no mention of agents in any description. When they apply, the detail goes in a collapsible block at the end:
 
 ```markdown
 +++ Agent notes
