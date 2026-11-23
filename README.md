@@ -9,6 +9,7 @@
 | Topic | Plugin | What it covers |
 | --- | --- | --- |
 | [education](./skills/education/) | `homework` | Studying: reviewing homework and exercises without giving away the answers. |
+| [project-management](./skills/project-management/) | `linear` | Planning: turning a discussion into a Linear project, milestones and issues. |
 
 Each topic folder holds one plugin per use case. New topics are added under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
 
@@ -69,6 +70,14 @@ Reviews exercises with a score out of 5, checks answers without revealing them, 
 | `/homework:topic-explain <topic>` | A step-by-step explanation, only when you ask for one. |
 | `/homework:topic-resources <topic>` | Free documentation for a topic. |
 | `/homework:brief-extract <file>` | Converts a PDF, image or docx brief into markdown. |
+
+### project-management: linear
+
+Creates a Linear project from a planning discussion, with milestones, documents and issues written in a neutral tone that any teammate can read.
+
+| Command | What it does |
+| --- | --- |
+| `/linear:plan-to-project` | Drafts the outline in the conversation language, then creates the project, milestones, documents and issues after approval. |
 
 ## Releases
 

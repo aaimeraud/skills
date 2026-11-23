@@ -17,6 +17,18 @@
         "exercises",
         "learning"
       ]
+    },
+    {
+      "name": "linear",
+      "source": "./skills/project-management/linear",
+      "description": "Turns a planning discussion into a Linear project with milestones, documents and issues in a neutral, team-readable tone.",
+      "category": "project-management",
+      "keywords": [
+        "linear",
+        "project-management",
+        "planning",
+        "issues"
+      ]
     }
   ]
 }
