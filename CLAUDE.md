@@ -33,7 +33,7 @@ skills/<topic>/                   # Topic, for example education
 Do the same as for a skill, plus:
 
 - Add one entry to `.claude-plugin/marketplace.json` (`name`, `source` as `./skills/<topic>/<use-case>`, `description`, `category`, `keywords`).
-- Add the plugin to `release-please-config.json` (as a package) and to `.release-please-manifest.json` with the starting version `0.0.0`.
+- Add the plugin to `release-please-config.json` (as a package, with a `package-name` equal to the plugin name, so that each plugin gets its own tag such as `linear-v1.0.0`) and to `.release-please-manifest.json` with the starting version `0.0.0`.
 - Set the plugin's `version` in `plugin.json` to `0.0.0` as well.
 - List the plugin in the topic's `README.md`.
 

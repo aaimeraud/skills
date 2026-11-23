@@ -4,6 +4,7 @@
   "packages": {
     "skills/education/homework": {
       "release-type": "simple",
+      "package-name": "homework",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
@@ -15,6 +16,7 @@
     },
     "skills/project-management/linear": {
       "release-type": "simple",
+      "package-name": "linear",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
