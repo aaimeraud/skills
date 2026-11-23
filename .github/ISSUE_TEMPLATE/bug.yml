@@ -1,4 +1,4 @@
-name: Bug report
+name: Skill bug report
 description: Report a skill that misbehaves, fails to load, or breaks its own rules
 title: "[Bug]: "
 labels:
