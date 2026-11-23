@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://github.com/aaimeraud/REPOSITORY#readme
-    about: Read the project documentation before opening an issue.
+    url: https://github.com/aaimeraud/skills#readme
+    about: Read the README and the topic index before opening an issue.
+  - name: Contributing guide
+    url: https://github.com/aaimeraud/skills/blob/main/CONTRIBUTING.md
+    about: Check the skill guidelines and the commit conventions before you contribute.

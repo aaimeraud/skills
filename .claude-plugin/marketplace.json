@@ -1,0 +1,22 @@
+{
+  "name": "aaimeraud-skills",
+  "owner": {
+    "name": "aaimeraud",
+    "url": "https://github.com/aaimeraud"
+  },
+  "description": "Agent skills organised by topic and use case, installable as Claude Code plugins. One plugin per use case.",
+  "plugins": [
+    {
+      "name": "homework",
+      "source": "./skills/education/homework",
+      "description": "Homework helper: reviews exercises, checks answers and gives hints without giving away the answers.",
+      "category": "education",
+      "keywords": [
+        "education",
+        "homework",
+        "exercises",
+        "learning"
+      ]
+    }
+  ]
+}

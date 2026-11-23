@@ -1,90 +1,83 @@
-# [PROJECT NAME]
+# Skills
 
-<!--
-  Replace every [PLACEHOLDER]. Delete comments before publishing if desired.
-  Keep this README focused on what users need to understand and use the project.
--->
+ A collection of agent skills, organised by topic and use case. Each topic is an installable plugin, so you only install what you need.  
+  
+[![skills.sh](https://skills.sh/b/aaimeraud/skills)](https://skills.sh/aaimeraud/skills)
 
-<!-- Project logo or banner:
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aaimeraud/REPOSITORY/main/docs/assets/banner.svg"
-       alt="[PROJECT NAME] banner" width="800">
-</p>
--->
+## Topics
 
-<p align="center">
-  <strong>[SHORT PROJECT DESCRIPTION]</strong>
-</p>
+| Topic | Plugin | What it covers |
+| --- | --- | --- |
+| [education](./skills/education/) | `homework` | Studying: reviewing homework and exercises without giving away the answers. |
 
-<!-- Customizable badges: keep only the badges that apply to the project. -->
-<p align="center">
-  <a href="https://github.com/aaimeraud/REPOSITORY/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/aaimeraud/REPOSITORY/ci.yml?branch=main&label=CI" alt="CI status">
-  </a>
-  <a href="https://github.com/aaimeraud/REPOSITORY/releases">
-    <img src="https://img.shields.io/github/v/release/aaimeraud/REPOSITORY?display_name=tag" alt="Latest release">
-  </a>
-  <a href="https://github.com/aaimeraud/REPOSITORY/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/aaimeraud/REPOSITORY" alt="License">
-  </a>
-  <!-- Add coverage, package, documentation, or community badges here. -->
-</p>
-
-## Overview
-
-[Explain the problem this project solves, who it is for, and why it exists.]
-
-## Features
-
-- [Feature or capability]
-- [Feature or capability]
-- [Feature or capability]
-
-## Requirements
-
-- [Runtime or platform requirement]
-- [Dependency or service requirement]
+Each topic folder holds one plugin per use case. New topics are added under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
 
 ## Installation
 
-```shell
-# Replace with the canonical installation command.
-[INSTALL COMMAND]
-```
+### Claude Code (recommended)
 
-## Usage
+Add this repository as a marketplace, then install the plugin for the topic you want:
 
 ```shell
-# Replace with a minimal, working example.
-[USAGE COMMAND]
+/plugin marketplace add aaimeraud/skills
+/plugin install homework@aaimeraud-skills
 ```
 
-<!-- Optional screenshot or demo:
-<p align="center">
-  <img src="docs/assets/screenshot.png" alt="[PROJECT NAME] screenshot" width="800">
-</p>
--->
+### Other agents (skills.sh)
 
-## Documentation
+Requires Node.js 22.20 or later. Install every skill in the collection at once:
 
-Read the [documentation](./docs/) or visit [DOCUMENTATION URL].
+```shell
+npx skills add aaimeraud/skills --all
+```
+
+### Manual
+
+Copy the skill folders you need (for example `skills/education/homework/study-setup/`) into your agent's skills directory, such as `~/.claude/skills/`.
+
+## Repository layout
+
+```text
+.claude-plugin/
+  marketplace.json          # Lists one installable plugin per use case
+.github/workflows/
+  release-please.yml        # Opens release PRs and publishes releases
+release-please-config.json  # Release packages, one per plugin
+skills/
+  <topic>/                  # One folder per topic
+    README.md               # Index of the topic's plugins
+    <use-case>/             # One plugin per use case
+      .claude-plugin/
+        plugin.json         # Plugin manifest: lists the plugin's skills
+      <skill-name>/
+        SKILL.md            # One skill, invoked as /<use-case>:<skill-name>
+```
+
+## Skills
+
+### education: homework
+
+Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links. Run the setup once, then use the commands below.
+
+| Command | What it does |
+| --- | --- |
+| `/homework:study-setup` | One-time setup: language, subject, criteria and resources. |
+| `/homework:exercise-review <exercise>` | Status, score out of 5, and up to three guiding problems. |
+| `/homework:exercise-review-all` | One line per exercise in the brief. |
+| `/homework:answer-check <answer>` | Says whether an answer is right, without revealing it. |
+| `/homework:exercise-hint <exercise>` | A four-step hint with documentation links. |
+| `/homework:topic-explain <topic>` | A step-by-step explanation, only when you ask for one. |
+| `/homework:topic-resources <topic>` | Free documentation for a topic. |
+| `/homework:brief-extract <file>` | Converts a PDF, image or docx brief into markdown. |
+
+## Releases
+
+Each plugin is versioned and released on its own. After a change is merged into `main`, release-please opens a release PR with the changelog and the new version. Merging that PR creates the tag and the GitHub Release. The changelog for each plugin is in its folder, for example [`skills/education/homework/CHANGELOG.md`](./skills/education/homework/CHANGELOG.md), once the first release is out.
 
 ## Contributing
 
-Contributions are welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for
-development setup, commit conventions, and pull request expectations.
-
-## Support
-
-Use [GitHub Issues](https://github.com/aaimeraud/REPOSITORY/issues) for reproducible
-bugs and feature requests. For questions, use the project discussions or
-support channel documented here.
-
-## Security
-
-Please do not report security vulnerabilities in public issues. Follow the
-instructions in [`SECURITY.md`](./SECURITY.md), when available.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## License
 
-Distributed under the [LICENSE](./LICENSE) ([LICENSE NAME]) license.
+Distributed under the [MIT License](./LICENSE).

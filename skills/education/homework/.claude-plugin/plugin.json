@@ -1,0 +1,27 @@
+{
+  "name": "homework",
+  "version": "0.0.0",
+  "description": "Homework helper that reviews exercises, checks answers and gives hints without giving away the answers.",
+  "author": {
+    "name": "aaimeraud"
+  },
+  "repository": "https://github.com/aaimeraud/skills",
+  "license": "MIT",
+  "keywords": [
+    "education",
+    "homework",
+    "exercises",
+    "learning",
+    "skills"
+  ],
+  "skills": [
+    "./study-setup",
+    "./exercise-review",
+    "./exercise-review-all",
+    "./answer-check",
+    "./exercise-hint",
+    "./topic-explain",
+    "./topic-resources",
+    "./brief-extract"
+  ]
+}
