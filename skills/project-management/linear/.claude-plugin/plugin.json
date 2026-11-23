@@ -1,0 +1,19 @@
+{
+  "name": "linear",
+  "version": "0.0.0",
+  "description": "Turns a planning discussion into a Linear project with milestones, documents and issues written in a neutral, team-readable tone.",
+  "author": {
+    "name": "aaimeraud"
+  },
+  "repository": "https://github.com/aaimeraud/skills",
+  "license": "MIT",
+  "keywords": [
+    "linear",
+    "project-management",
+    "planning",
+    "issues"
+  ],
+  "skills": [
+    "./plan-to-project"
+  ]
+}
