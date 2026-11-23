@@ -45,7 +45,20 @@ skills/
 
 ## Skills
 
-- **education / homework**: `study-setup`, `exercise-review`, `exercise-review-all`, `answer-check`, `exercise-hint`, `topic-explain`, `topic-resources`, `brief-extract`. Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links. Invoked as `/homework:<skill>`.
+### education: homework
+
+Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links. Run the setup once, then use the commands below.
+
+| Command | What it does |
+| --- | --- |
+| `/homework:study-setup` | One-time setup: language, subject, criteria and resources. |
+| `/homework:exercise-review <exercise>` | Status, score out of 5, and up to three guiding problems. |
+| `/homework:exercise-review-all` | One line per exercise in the brief. |
+| `/homework:answer-check <answer>` | Says whether an answer is right, without revealing it. |
+| `/homework:exercise-hint <exercise>` | A four-step hint with documentation links. |
+| `/homework:topic-explain <topic>` | A step-by-step explanation, only when you ask for one. |
+| `/homework:topic-resources <topic>` | Free documentation for a topic. |
+| `/homework:brief-extract <file>` | Converts a PDF, image or docx brief into markdown. |
 
 ## Contributing
 
