@@ -22,7 +22,7 @@ description: "Turns a planning discussion into a Linear project with milestones,
 3. **Collect the plan** from the discussion: goal, scope, decisions, phases, tasks and their dependencies. Ask one precise question when something blocks the outline. List the teams with the Linear tools, and look for an existing project or issue with the same subject to avoid duplicates.
 4. **Present the outline and wait for approval.** Show the project name, summary and lead, the milestones, and the issue titles under each milestone with their priority and dependencies. Create nothing yet.
 5. **Create in Linear**, in this order: project, milestones, documents, issues. Check each tool's parameters before calling it.
-6. **Check the result.** Re-read the project, the documents and the issues. Confirm the language of every field, the tone rules, the priorities and the relations, and correct what does not match. Then give the user the project link and a short summary.
+6. **Check the result.** Re-read the project, the documents and the issues. Confirm the language of every field, the tone rules, the priorities, the relations, the document colors and the date elements, and correct what does not match. Then give the user the project link and a short summary.
 
 ## Project
 
@@ -31,10 +31,11 @@ description: "Turns a planning discussion into a Linear project with milestones,
 - **Icon and color:** set both, matching the subject.
 - **Summary field:** one sentence saying what it is and for whom.
 - **Description**, about 20 lines, in this order: Context and goal, Scope (in and out), Key decisions, Working conventions (branch, pull request, definition of done). Do not list the milestones or the documents: Linear already shows them.
-- **Documents**, each with an icon and a color:
-  - "Spec": detailed behavior and constraints (icon `CodeBlock`).
-  - "Resources": reference links (icon `FolderOpen`).
-  - "Journal", only when the user wants it (icon `Write`). It tracks progress, decisions and difficulties as dated entries, each with Progress, Decisions, Difficulties and Next. It may use the first person.
+- **Documents**, each with an icon and a color. Always pass both `icon` and `color` (a hex value), never the icon alone:
+  - "Spec": detailed behavior and constraints (icon `CodeBlock`, color `#f2994a`).
+  - "Resources": reference links (icon `FolderOpen`, color `#4ea7fc`).
+  - "Journal", only when the user wants it (icon `Write`, color `#bb87fc`). It tracks progress, decisions and difficulties as dated entries, each with Progress, Decisions, Difficulties and Next. It may use the first person.
+- **Dates in documents:** write every date as a Linear date element, never as plain text: `<linear-date date="2026-11-23">2026-11-23</linear-date>`. Use the real current date.
 
 ## Milestone
 
