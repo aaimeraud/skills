@@ -59,9 +59,14 @@ Keep titles short, specific and in the imperative mood, for example `feat(educat
 
 ## Pull requests
 
+- Pull requests are squash-merged. The PR title becomes the commit that drives releases, so it must be a Conventional Commit title.
 - Keep each pull request focused on one skill or one topic.
 - Describe what the skill does, how you tested it (for example, by running it on a real exercise), and any change in behaviour.
 - Use the repository [pull request template](./.github/PULL_REQUEST_TEMPLATE.md).
+
+## Releases
+
+Releases are automatic. After a pull request is merged into `main`, release-please opens a release PR with the changelog and the new version for each changed plugin. Merging that release PR publishes the tag and the GitHub Release. Maintainers merge the release PR, and nothing is released without that step.
 
 ## Reporting bugs and requesting features
 

@@ -1,0 +1,22 @@
+name: Release Please
+
+# Runs on every push to main. It opens or updates a release PR from the
+# Conventional Commit history. Merging that release PR creates the tag and
+# the GitHub Release. Nothing is published without a human merge.
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
