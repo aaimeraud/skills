@@ -77,7 +77,7 @@ Creates a Linear project from a planning discussion, with milestones, documents 
 
 | Command | What it does |
 | --- | --- |
-| `/linear:plan-to-project` | Asks the language, drafts the outline, then creates the project, milestones, documents and issues after approval. |
+| `/linear:plan-to-project` | Drafts the outline in the conversation language, then creates the project, milestones, documents and issues after approval. |
 
 ## Releases
 
