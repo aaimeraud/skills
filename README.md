@@ -6,9 +6,9 @@ A collection of agent skills, organised by topic and use case. Each topic is an 
 
 | Topic | Plugin | What it covers |
 | --- | --- | --- |
-| [education](./skills/education/) | `education-skills` | Studying: reviewing homework and exercises without giving away the answers. |
+| [education](./skills/education/) | `homework` | Studying: reviewing homework and exercises without giving away the answers. |
 
-New topics are added as folders under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
+Each topic folder holds one plugin per use case. New topics are added under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
 
 ## Installation
 
@@ -18,12 +18,12 @@ Add this repository as a marketplace, then install the plugin for the topic you 
 
 ```shell
 /plugin marketplace add aaimeraud/skills
-/plugin install education-skills@aaimeraud-skills
+/plugin install homework@aaimeraud-skills
 ```
 
 ### Manual
 
-Copy the skill folder you need (for example `skills/education/homework-reviewer/`) into your agent's skills directory, such as `~/.claude/skills/`.
+Copy the skill folders you need (for example `skills/education/homework/`, which contains `shared/` and one folder per command) into your agent's skills directory, such as `~/.claude/skills/`.
 
 ## Repository layout
 
@@ -32,17 +32,18 @@ Copy the skill folder you need (for example `skills/education/homework-reviewer/
   marketplace.json          # Lists one installable plugin per topic
 skills/
   <topic>/                  # One folder per topic or use case
-    .claude-plugin/
-      plugin.json           # Plugin manifest: lists the topic's skills
-    README.md               # Index of the topic's skills
-    <skill-name>/
-      SKILL.md              # The skill itself
+    README.md               # Index of the topic's plugins
+    <use-case>/             # One plugin per use case
+      .claude-plugin/
+        plugin.json         # Plugin manifest: lists the plugin's skills
+      shared/               # Rules and reference files shared by the skills
+      <skill-name>/
+        SKILL.md            # One skill, invoked as /<use-case>:<skill-name>
 ```
 
 ## Skills
 
-- **education**
-  - [homework-reviewer](./skills/education/homework-reviewer/SKILL.md): Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links.
+- **education / homework**: `setup`, `review`, `review-all`, `check`, `hint`, `explain`, `resources`, `extract`. Reviews exercises with a score out of 5, checks answers without revealing them, and gives hints with official documentation links. Invoked as `/homework:<skill>`.
 
 ## Contributing
 

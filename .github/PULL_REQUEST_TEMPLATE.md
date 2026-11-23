@@ -23,7 +23,7 @@ Closes #
 
 ## Affected skill or topic
 
-<!-- For example: skills/education/homework-reviewer, or "new topic: skills/<topic>". -->
+<!-- For example: skills/education/homework/review, or "new topic: skills/<topic>". -->
 
 ## Validation
 

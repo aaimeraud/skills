@@ -4,8 +4,9 @@ Thanks for helping grow this collection. The repository is meant to scale, so th
 
 ## Adding a skill
 
-1. Pick the topic folder under `skills/` that fits the use case. If none fits, create a new topic (see below).
-2. Create a folder named after the skill, in lowercase kebab-case: `skills/<topic>/<skill-name>/`.
+1. Pick the plugin folder `skills/<topic>/<use-case>/` that fits. If none fits, create a new plugin for the use case (see below).
+2. Create a folder named after the skill, in lowercase kebab-case, directly under the plugin: `skills/<topic>/<use-case>/<skill-name>/`. Its command is `/<use-case>:<skill-name>`.
+   - Put rules or reference files shared by several skills in `skills/<topic>/<use-case>/shared/`, and link to them from each `SKILL.md` with a relative path such as `../shared/rules.md`.
 3. Add a `SKILL.md` file with frontmatter:
 
    ```markdown
@@ -16,16 +17,17 @@ Thanks for helping grow this collection. The repository is meant to scale, so th
    ```
 
    The `name` must match the folder name. The `description` is what the agent reads to decide when to use the skill, so make it specific.
-4. Add the skill to the topic's `skills/<topic>/.claude-plugin/plugin.json` (in the `skills` list) and to the topic's `README.md`.
+4. Add the skill to the plugin's `.claude-plugin/plugin.json` (in the `skills` list, as `./<skill-name>`) and to the topic's `README.md`.
 5. Add the skill to the table of skills in the root [`README.md`](./README.md).
 
-## Adding a topic
+## Adding a use case (plugin)
 
-1. Create `skills/<topic>/` with a `README.md` (a short index of its skills) and `.claude-plugin/plugin.json`.
-2. Add one entry to [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) with `name`, `source` (`./skills/<topic>`), `description`, `category` and `keywords`.
-3. Add the topic to the table at the top of the root `README.md`.
+1. Create `skills/<topic>/<use-case>/` with a `.claude-plugin/plugin.json`.
+2. Add the plugin to the topic's `README.md`.
+3. Add one entry to [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) with `name`, `source` (`./skills/<topic>/<use-case>`), `description`, `category` and `keywords`.
+4. Add the plugin to the table at the top of the root `README.md`.
 
-One topic equals one plugin. Keep a topic focused on one kind of user or use case; split it when it grows too broad.
+One plugin equals one use case. Its skills share a command prefix, so `/<use-case>:<skill-name>`.
 
 ## Skill guidelines
 
@@ -53,7 +55,7 @@ Use the topic as the scope when a change belongs to one topic, for example `feat
 | `refactor` | Restructuring without behaviour changes |
 | `chore`    | Maintenance that does not affect users |
 
-Keep titles short, specific and in the imperative mood, for example `feat(education): add homework-reviewer skill`.
+Keep titles short, specific and in the imperative mood, for example `feat(education): add the review skill to homework`.
 
 ## Pull requests
 
