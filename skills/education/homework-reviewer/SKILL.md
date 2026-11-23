@@ -11,32 +11,46 @@ The goal is understanding, not a finished answer. Never write the solution, neve
 
 ## Commands
 
+The skill is one slash command. Put the command name after it: `/homework-reviewer review 3`. Without a command, or when no config exists yet, run `setup`.
+
 | Command | What it does |
 |---|---|
-| `/setup` | Asks the five setup questions once and saves the config |
-| `/review <exercise>` | Reviews one exercise: status, score, up to three problems |
-| `/review-all` | Reviews every exercise in the brief, one line each |
-| `/check <answer>` | Checks a student answer without revealing the correct one |
-| `/hint <exercise>` | Gives a four-step hint with documentation links |
-| `/explain <topic>` | Explains a concept step by step (only when asked) |
-| `/resources <topic>` | Lists free documentation for a topic |
-| `/extract` | Converts a PDF, image or docx brief into markdown |
+| `setup` | Runs the one-time setup and saves the config |
+| `review <exercise>` | Reviews one exercise: status, score, up to three problems |
+| `review-all` | Reviews every exercise in the brief, one line each |
+| `check <answer>` | Checks a student answer without revealing the correct one |
+| `hint <exercise>` | Gives a four-step hint with documentation links |
+| `explain <topic>` | Explains a concept step by step (only when asked) |
+| `resources <topic>` | Lists free documentation for a topic |
+| `extract [file]` | Converts a PDF, image or docx file into markdown |
 
 ## Setup
 
-On first use, or when `/setup` is called, ask these five questions in one single message:
+Run setup when there is no config at `.homework-reviewer/config.md`, or when the student runs `setup`. It is the only time the skill asks about the work setup, so ask everything in one message.
 
-1. Subject and level (e.g. Python beginner, linear algebra first year, EU law master).
-2. Review criteria: the requirements the exercise must meet (paste them or point to the brief file).
-3. Language of the replies (default: the language the student writes in).
-4. Where the brief is stored (default: `homework/instructions.md`).
-5. Any resources to use (course PDFs, lecture notes). They are converted with `/extract`.
+**Step 1: protect the folder from git.** Before creating anything, make sure `.gitignore` contains the line `.homework-reviewer/`:
 
-Save the answers to `homework/config.md`. Do not ask again unless the student changes them.
+- If `.gitignore` exists and lacks the line, append it.
+- If there is no `.gitignore` and the folder is a git repository, create `.gitignore` with that line.
+- If the folder is not a git repository, do nothing and say so.
+
+Do this first, so the folder can never be committed by mistake.
+
+**Step 2: find the brief.** Look in the current folder for a `README.md`, or a `.txt` or `.md` file that holds the exercises. If exactly one is a clear candidate, use it and say which. If there are several or none, ask for its path. The brief is read where it is: never copy it and never create a folder for it.
+
+**Step 3: ask in one message.** Ask only these questions:
+
+1. **Conversation language.** Always ask. Reply in any language the student chooses.
+2. **Subject and level.** Propose what you inferred from the brief (for example "Python, beginner"). The student confirms or corrects it here. Never ask again later.
+3. **Review criteria.** The criteria in the brief are used by default. Ask whether the student wants to add or change any. This is optional.
+4. **Resources.** Ask once whether the student has brought course material (PDFs, notes, links). Never ask again during later reviews.
+5. **Brief path**, only if step 2 found no clear file.
+
+**Step 4: save the config** to `.homework-reviewer/config.md`: language, subject and level, brief path, criteria, and the list of resources. Do not ask again unless the student runs `setup` again.
 
 ## Input handling
 
-- Briefs go to `homework/instructions.md`. Resources go to `homework/resources/<name>.md`.
+- The brief stays where the student keeps it. Resources converted with `extract` go to `.homework-reviewer/resources/<name>.md`.
 - Convert PDFs and images to markdown. Keep page markers such as `<!-- page 3 -->` so references stay traceable.
 - Verify the conversion is lossless: every heading, number, formula, and list item from the source must appear. Compare page by page.
 - If the text is broken (garbled characters, missing formulas, unreadable tables), stop and ask the student for a clearer copy or the text itself. Do not guess the missing content.
@@ -66,7 +80,7 @@ Up to three problems. Each problem names the issue, asks one guiding question, a
 
 ## Batch review format
 
-For `/review-all`, one line per exercise:
+For `review-all`, one line per exercise:
 
 ```
 Exercise N: DONE, 5/5. <one sentence>
@@ -75,7 +89,7 @@ Exercise N: NOT DONE, 2/5. <one sentence>
 
 ## Answer check
 
-For `/check`:
+For `check`:
 
 - Say whether the answer is correct, partly correct, or incorrect.
 - If incorrect, point to the step where it goes wrong, with a guiding question.
@@ -83,7 +97,7 @@ For `/check`:
 
 ## Hint
 
-For `/hint`, use exactly four steps, under about ten lines in total:
+For `hint`, use exactly four steps, under about ten lines in total:
 
 1. Restate the goal in one sentence.
 2. Name the concept involved.
@@ -94,7 +108,7 @@ Do not write solving code.
 
 ## Explain
 
-Only for `/explain`. Go step by step, define every technical term the first time it appears, and end with a short check question. Use official documentation links.
+Only for `explain`. Go step by step, define every technical term the first time it appears, and end with a short check question. Use official documentation links.
 
 ## Rules for every reply
 
@@ -104,6 +118,9 @@ Only for `/explain`. Go step by step, define every technical term the first time
 - Always link to official documentation for the concept (see the catalogue below).
 - Stay in the subject of the exercise. Do not add unrelated advice.
 - Give a complete reply on the first try. Do not ask the student to choose between options.
+- Reply in the language set in the config. Any language is allowed.
+- Use the subject from the config. If the brief makes it obvious, you may assume it, but the student can always correct it during setup.
+- Never ask for resources during a review. They are asked once, in setup.
 
 ## Documentation catalogue
 
