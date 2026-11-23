@@ -18,5 +18,9 @@ jobs:
     steps:
       - uses: googleapis/release-please-action@v4
         with:
+          # A personal token makes the release PR come from that account and lets
+          # other workflows run on it. Forks have no secret, so they fall back to
+          # the default token.
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
