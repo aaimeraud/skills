@@ -9,6 +9,8 @@ description: "Reviews one homework exercise for a student: status (DONE or NOT D
 
 Read `.homework/config.md`. If it does not exist, tell the student to run `/homework:study-setup` first, and stop. Reply in the language set in the config. Use the subject from the config.
 
+If `source` is `linear` and the current git branch names another issue than `current issue`, tell the student to run `/homework:linear-sync` first, and stop.
+
 ## Ground rules
 
 - Never give the answer, the final code, the corrected line, or the correct result.
@@ -16,16 +18,20 @@ Read `.homework/config.md`. If it does not exist, tell the student to run `/home
 - Give a complete reply on the first try. Never ask the student to pick between options.
 - Never ask for resources here. They are asked once, in setup.
 
+## Guide mode
+
+When the config `mode` is `guide`, the student works on their own project. You may also relate each problem to the concept behind it, explain that concept in two or three sentences, and show a short example on a different problem than the one under review. Never write the code the exercise asks for, and never correct the student's line.
+
 ## Input
 
-- The exercise: the number or title the student gives. Find it in the brief named in `.homework/config.md`.
+- The exercise: the number or title the student gives. Find it in the brief named in `.homework/config.md`. With a Linear source, the exercise is the current issue in `.homework/linear/issue.md`, and the student does not need to name it.
 - The student's work: the file, code or text they point to.
-- The criteria from the config. If the config has none, use the criteria in the brief.
+- The criteria from the config. If the config has none, use the criteria in the brief. With a Linear source, use the issue's success criteria and requirements.
 
 ## Procedure
 
 1. Read the exercise and the criteria.
-2. Check each requirement against the student's work. Note the evidence: the line, value or sentence that proves it.
+2. Check each requirement against the student's work. Note the evidence: the line, value or sentence that proves it. When a criterion is a command, run it if it only reads or checks (tests, build, linter, formatter check, `grep`). List any other command, such as one that creates, deletes or publishes something, and ask before running it.
 3. Decide the status:
    - **DONE**: every requirement is met. Only then.
    - **NOT DONE**: at least one requirement is missing or wrong.
@@ -43,7 +49,7 @@ Read `.homework/config.md`. If it does not exist, tell the student to run `/home
 3. ...
 ```
 
-Up to three problems. Each problem names the issue, asks one guiding question, and links to official documentation from the list below.
+Up to three problems. Each problem names the issue, asks one guiding question, and links to official documentation from the list below. With a Linear source, prefer the links in the issue's documentation section and in the project's resources document.
 
 ## Documentation links
 

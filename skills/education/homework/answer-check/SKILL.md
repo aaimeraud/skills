@@ -20,3 +20,4 @@ Read `.homework/config.md`. If it does not exist, tell the student to run `/home
 - Say whether the answer is correct, partly correct, or incorrect.
 - If it is incorrect or partly correct, point to the step where it goes wrong, with one guiding question.
 - Link to official documentation for the concept, when it helps. Use the official sites only, such as the Python 3 docs (https://docs.python.org/3/) or MDN (https://developer.mozilla.org/).
+- With a Linear source, check the answer against the current issue in `.homework/linear/issue.md`, and prefer the links of its documentation section.

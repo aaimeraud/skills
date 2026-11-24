@@ -18,6 +18,8 @@ Read `.homework/config.md`. If it exists and lists the student's own material, m
 
 List the free documentation for the topic the student names, choosing from the catalogue below. Only list a resource that matches the topic.
 
+With a Linear source, look first in `.homework/linear/issue.md` (its documentation section) and in the project documents in `.homework/linear/docs/`, then complete from the catalogue. When no topic is given, list the resources for the concepts of the current issue.
+
 ## Catalogue
 
 All resources below are free to read without an account, except where noted.

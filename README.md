@@ -70,6 +70,10 @@ Reviews exercises with a score out of 5, checks answers without revealing them, 
 | `/homework:topic-explain <topic>` | A step-by-step explanation, only when you ask for one. |
 | `/homework:topic-resources <topic>` | Free documentation for a topic. |
 | `/homework:brief-extract <file>` | Converts a PDF, image or docx brief into markdown. |
+| `/homework:linear-sync [issue]` | Copies the current Linear issue and the project documents, for a Linear source. |
+| `/homework:journal` | Drafts a dated journal entry, then appends it to the Linear Journal after approval. |
+
+With no brief in the folder, setup can use a Linear project instead. The current issue (found from the git branch) becomes the exercise, and the commands switch to guide mode: more explanations and examples, never the code the issue asks for.
 
 ### project-management: linear
 

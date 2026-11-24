@@ -13,3 +13,7 @@ Skills for students and self-learners: reviewing exercises, checking answers, an
   - `/homework:topic-explain <topic>`: a step-by-step explanation, only when asked.
   - `/homework:topic-resources <topic>`: free documentation for a topic.
   - `/homework:brief-extract <file>`: converts a PDF, image or docx into markdown.
+  - `/homework:linear-sync [issue]`: copies the current Linear issue and the project documents into the homework folder.
+  - `/homework:journal`: drafts a dated journal entry and, after approval, appends it to the Linear Journal.
+
+With no brief in the folder, setup can use a Linear project instead, for example one made with `/linear:plan-to-project` in its learning variant. The current issue then becomes the exercise, and the commands switch to guide mode: they may explain concepts and show examples on other problems, but still never write the code the issue asks for.
