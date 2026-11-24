@@ -18,8 +18,6 @@ Read `.homework/config.md`. If it does not exist, tell the student to run `/home
 
 Go step by step, define every technical term the first time it appears, and end with a short check question. Link to official documentation from the list below.
 
-With a Linear source, link the concept to the current issue in `.homework/linear/issue.md`: say where it appears in the issue, and prefer the links of its documentation section and of the project's resources document. When the config `mode` is `guide`, you may add a short example on a different problem than the issue, never the code the issue asks for.
-
 ## Official documentation
 
 - Python 3: https://docs.python.org/3/

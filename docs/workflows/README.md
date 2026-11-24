@@ -8,5 +8,5 @@ The examples use a made-up project, a small to-do CLI written in Go, with issue 
 | --- | --- | --- |
 | [Homework with a local brief](./homework-local-brief.md) | `homework` | A teacher gave exercises in a README or a text file. |
 | [Homework from a PDF](./homework-pdf-brief.md) | `homework` | The brief or the course material is a PDF, an image or a docx. |
-| [Personal project with Linear](./personal-project-linear.md) | `linear`, `homework` | Learning a language by building a project planned in Linear. |
+| [Personal project with Linear](./personal-project-linear.md) | `linear`, `mentor` | Learning a language by building a project planned in Linear. |
 | [Team project planning](./team-project-linear.md) | `linear` | Turning a planning discussion into a Linear project for a team. |

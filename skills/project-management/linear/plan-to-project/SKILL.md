@@ -100,7 +100,7 @@ The contributor writes the code. Never include solution code.
 
 Add to the project description a "How to work" section: read Concepts first, try alone, check the success criteria, read the Hints before asking for help, one issue per branch and pull request.
 
-Keep every success criterion a command that runs in the repository, or an observation of its output. The homework plugin (`/homework:linear-sync`) reads these issues and runs the criteria to review the work.
+Keep every success criterion a command that runs in the repository, or an observation of its output. The mentor plugin (`/mentor:sync` and `/mentor:review`) reads these issues and runs the criteria to review the work.
 
 ## Documentation
 

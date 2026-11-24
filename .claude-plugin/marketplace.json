@@ -19,6 +19,18 @@
       ]
     },
     {
+      "name": "mentor",
+      "source": "./skills/education/mentor",
+      "description": "Mentor for personal coding projects: unblocks, reviews and explains concepts in the context of the current task, optionally read from Linear, without writing the task's code.",
+      "category": "education",
+      "keywords": [
+        "education",
+        "mentor",
+        "programming",
+        "learning"
+      ]
+    },
+    {
       "name": "linear",
       "source": "./skills/project-management/linear",
       "description": "Turns a planning discussion into a Linear project with milestones, documents and issues in a neutral, team-readable tone.",

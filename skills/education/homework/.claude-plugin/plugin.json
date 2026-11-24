@@ -22,8 +22,6 @@
     "./exercise-hint",
     "./topic-explain",
     "./topic-resources",
-    "./brief-extract",
-    "./linear-sync",
-    "./journal"
+    "./brief-extract"
   ]
 }

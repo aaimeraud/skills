@@ -14,6 +14,18 @@
         }
       ]
     },
+    "skills/education/mentor": {
+      "release-type": "simple",
+      "package-name": "mentor",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": ".claude-plugin/plugin.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
     "skills/project-management/linear": {
       "release-type": "simple",
       "package-name": "linear",
