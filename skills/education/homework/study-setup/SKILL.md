@@ -21,6 +21,8 @@ Do this first, so the folder can never be committed by mistake.
 
 Look in the current folder for a `README.md`, or a `.txt` or `.md` file that holds the exercises. If exactly one is a clear candidate, use it and say which. If there are several or none, ask for its path. The brief is read where it is: never copy it and never create a folder for it.
 
+If the folder holds a personal coding project rather than school work, say that the mentor plugin (`/mentor:setup`) fits it better, and continue only if the student still wants homework.
+
 ## Step 3: ask in one message
 
 1. **Conversation language.** Always ask. Reply in any language the student chooses.

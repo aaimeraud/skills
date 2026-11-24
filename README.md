@@ -9,9 +9,12 @@
 | Topic | Plugin | What it covers |
 | --- | --- | --- |
 | [education](./skills/education/) | `homework` | Studying: reviewing homework and exercises without giving away the answers. |
+| [education](./skills/education/) | `mentor` | Learning by building: a mentor for personal coding projects, with the task read from Linear. |
 | [project-management](./skills/project-management/) | `linear` | Planning: turning a discussion into a Linear project, milestones and issues. |
 
 Each topic folder holds one plugin per use case. New topics are added under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
+
+To see the skills in use, read the [example workflows](./docs/workflows/): homework with a local or PDF brief, a personal project with the mentor and Linear, and team project planning.
 
 ## Installation
 
@@ -44,6 +47,7 @@ Copy the skill folders you need (for example `skills/education/homework/study-se
 .github/workflows/
   release-please.yml        # Opens release PRs and publishes releases
 release-please-config.json  # Release packages, one per plugin
+docs/workflows/             # Example workflows that show the skills in use
 skills/
   <topic>/                  # One folder per topic
     README.md               # Index of the topic's plugins
@@ -70,6 +74,19 @@ Reviews exercises with a score out of 5, checks answers without revealing them, 
 | `/homework:topic-explain <topic>` | A step-by-step explanation, only when you ask for one. |
 | `/homework:topic-resources <topic>` | Free documentation for a topic. |
 | `/homework:brief-extract <file>` | Converts a PDF, image or docx brief into markdown. |
+
+### education: mentor
+
+A mentor for personal coding projects. It reads the code and the current task (optionally from a Linear project), explains the concepts behind a blocker with examples on other problems, and reviews the work against its success criteria. No grade, and never the task's code.
+
+| Command | What it does |
+| --- | --- |
+| `/mentor:setup` | One-time setup: language, stack, level, goals and an optional Linear project. |
+| `/mentor:sync [issue]` | Copies the current Linear issue, found from the git branch, and the project documents. |
+| `/mentor:hint` | Explains the concept behind a blocker, with an example on a different problem. |
+| `/mentor:review` | Checks each success criterion and names the concepts to deepen. |
+| `/mentor:explain <concept>` | A step-by-step explanation linked to the project, with free resources. |
+| `/mentor:journal` | Drafts a dated journal entry, then appends it to the Linear Journal after approval. |
 
 ### project-management: linear
 
