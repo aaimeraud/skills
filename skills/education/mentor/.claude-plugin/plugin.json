@@ -1,6 +1,6 @@
 {
   "name": "mentor",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Mentor for personal coding projects: unblocks, reviews and explains concepts in the context of the current task, optionally read from Linear, without writing the task's code.",
   "author": {
     "name": "aaimeraud"
