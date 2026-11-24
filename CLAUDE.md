@@ -9,6 +9,7 @@ Agent skills organised by topic and use case, each use case installable as a Cla
 release-please-config.json        # Release packages: one per plugin
 .release-please-manifest.json     # Current version of each release package
 .github/workflows/release-please.yml  # Opens the release PR on push to main
+docs/workflows/                   # Example workflows, one file per use case
 skills/<topic>/                   # Topic, for example education
   README.md                       # Index of the topic's plugins
   <use-case>/                     # Plugin, for example homework
@@ -36,6 +37,10 @@ Do the same as for a skill, plus:
 - Add the plugin to `release-please-config.json` (as a package, with a `package-name` equal to the plugin name, so that each plugin gets its own tag such as `linear-v1.0.0`) and to `.release-please-manifest.json` with the starting version `0.0.0`.
 - Set the plugin's `version` in `plugin.json` to `0.0.0` as well.
 - List the plugin in the topic's `README.md`.
+
+## Example workflows
+
+`docs/workflows/` shows how the skills fit together, one file per use case, listed in its `README.md`. Each file has: when to use it, the commands (with a Mermaid diagram), a short sample exchange, and what the agent does not do. Examples use a made-up project. When a skill's commands or behaviour change, update the workflows that show it.
 
 ## Changelog
 

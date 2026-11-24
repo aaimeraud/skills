@@ -16,4 +16,6 @@ Skills for students and self-learners: reviewing exercises, checking answers, an
   - `/homework:linear-sync [issue]`: copies the current Linear issue and the project documents into the homework folder.
   - `/homework:journal`: drafts a dated journal entry and, after approval, appends it to the Linear Journal.
 
+Examples: [homework with a local brief](../../docs/workflows/homework-local-brief.md), [homework from a PDF](../../docs/workflows/homework-pdf-brief.md), [personal project with Linear](../../docs/workflows/personal-project-linear.md).
+
 With no brief in the folder, setup can use a Linear project instead, for example one made with `/linear:plan-to-project` in its learning variant. The current issue then becomes the exercise, and the commands switch to guide mode: they may explain concepts and show examples on other problems, but still never write the code the issue asks for.

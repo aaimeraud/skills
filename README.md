@@ -13,6 +13,8 @@
 
 Each topic folder holds one plugin per use case. New topics are added under [`skills/`](./skills/). See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the layout.
 
+To see the skills in use, read the [example workflows](./docs/workflows/): homework with a local or PDF brief, a personal project with Linear, and team project planning.
+
 ## Installation
 
 ### Claude Code (recommended)
@@ -44,6 +46,7 @@ Copy the skill folders you need (for example `skills/education/homework/study-se
 .github/workflows/
   release-please.yml        # Opens release PRs and publishes releases
 release-please-config.json  # Release packages, one per plugin
+docs/workflows/             # Example workflows that show the skills in use
 skills/
   <topic>/                  # One folder per topic
     README.md               # Index of the topic's plugins
